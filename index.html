@@ -24,6 +24,8 @@
 			/* внутренний отступ внутри коробочки */
 			padding: 20px;
 
+			box-sizing: border-box;
+
 			/* задаём скорость анимации */ 
 			transition: all 0.3s;
 			}
@@ -49,11 +51,30 @@
 
 			border-radius: 0 20px 0 20px;
 		}
+
+		/*---- пишем стили которые меняются на мобиле     ------*/
+		@media(max-width: 500px) {
+			
+			div div {
+				width: 100%;
+			}
+
+			div div:hover {
+				transform: none;
+			}
+
+			body div:first-child a {
+				display: block;
+				text-align: center;
+			}
+
+
+		}
 	</style>
 </head>
 <body>
 
-	<div style="padding: 20px;">
+	<div style="padding: 20px 0">
 		<a href="#sakura"><span>Сакура</span></a>
 		<a href="#architecture"><span>Архитектура</span></a>
 		<a href="#space"><span>Космос</span></a>
